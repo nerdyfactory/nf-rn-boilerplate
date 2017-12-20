@@ -10,13 +10,15 @@ CounterScreen.navigationOptions = () => {
   };
 };
 
-/** MOBX Approach */
+/** MOBX Approach *
 import { inject } from 'mobx-react';
 import { CountersActions } from '../Store'
-console.log(CountersActions)
+
 export default inject(({ store }) => (
   {
+    // Stores
     counter: store.counters.counter,
+    // Actions
     increase: CountersActions.increase,
     decrease: CountersActions.decrease
   }
