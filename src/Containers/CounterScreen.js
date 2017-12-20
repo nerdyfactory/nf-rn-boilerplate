@@ -1,12 +1,27 @@
 // import { connect } from 'react-redux';
-// import * as customers from '../redux/customers';
-import LaunchScreen from '../Components/LaunchScreen';
 
-LaunchScreen.navigationOptions = () => {
+
+// import * as customers from '../redux/customers';
+import CounterScreen from '../Components/CounterScreen';
+
+CounterScreen.navigationOptions = () => {
   return {
     header: null,
   };
 };
+
+/** MOBX Approach */
+import { inject } from 'mobx-react';
+import { CountersActions } from '../Store'
+console.log(CountersActions)
+export default inject(({ store }) => (
+  {
+    counter: store.counters.counter,
+    increase: CountersActions.increase,
+    decrease: CountersActions.decrease
+  }
+))(CounterScreen)
+/** */
 
 /*
 const mapStateToProps = (state) => ({
@@ -23,5 +38,3 @@ export default connect(
   mapDispatchToProps
 )(Intro);
 */
-
-export default LaunchScreen;
