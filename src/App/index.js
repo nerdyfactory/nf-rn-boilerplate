@@ -1,16 +1,15 @@
 import React, { Component } from 'react'
 
-import { store, dispatch, Provider, Navigation } from '../Store'
+import { store, Provider } from '../Store'
+
+import RootContainer from '../Containers/RootContainer'
 
 export default class App extends Component {
 
   render() {
     return (
-      <Provider
-        dispatchNavigation={dispatch}
-        navigationState={store.nav}
-        store={store} >
-        <Navigation />
+      <Provider store={store} >
+        <RootContainer />
       </Provider>
     );
   }

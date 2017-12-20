@@ -7,6 +7,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "babel-core": "^6.26.0",
+    "eslint": "^4.13.1",
     "eslint-config-standard": "^11.0.0-beta.0",
     "eslint-config-standard-react": "^5.0.0",
     "eslint-plugin-import": "^2.8.0",
@@ -16,9 +18,16 @@
     "eslint-plugin-standard": "^3.0.1",
     "mobx": "^3.4.1",
     "mobx-react": "^4.3.5",
+    "ramda": "^0.25.0",
     "react": "16.0.0",
     "react-native": "0.51.0",
-    "react-navigation": "^1.0.0-beta.21"
+    "react-navigation": "^1.0.0-beta.21",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-persist": "^5.4.0",
+    "redux-saga": "^0.16.0",
+    "reduxsauce": "^0.7.0",
+    "seamless-immutable": "^7.1.2"
   },
   "devDependencies": {
     "babel-jest": "21.2.0",

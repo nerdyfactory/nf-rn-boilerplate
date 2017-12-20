@@ -1,19 +1,23 @@
-// import { connect } from 'react-redux';
 
+/** MobX */
+import { CountersActions } from '../Store'
+import { inject } from 'mobx-react'
+/** */
 
-// import * as customers from '../redux/customers';
-import CounterScreen from '../Components/CounterScreen';
+/** Redux *
+import { connect } from 'react-redux'
+import AppRedux from '../Store/Redux/AppRedux'
+/** */
+
+import CounterScreen from '../Components/CounterScreen'
 
 CounterScreen.navigationOptions = () => {
   return {
-    header: null,
-  };
-};
+    header: null
+  }
+}
 
-/** MOBX Approach *
-import { inject } from 'mobx-react';
-import { CountersActions } from '../Store'
-
+/** MobX */
 export default inject(({ store }) => (
   {
     // Stores
@@ -25,18 +29,18 @@ export default inject(({ store }) => (
 ))(CounterScreen)
 /** */
 
-/*
+/** Redux *
 const mapStateToProps = (state) => ({
-  status: customers.getStatus(state),
-  message: customers.getMessage(state),
-});
+  counter: state.app.counter
+})
 
-const mapDispatchToProps = (dispatch) => ({
-  requestOTP: (countyCode, phoneNumber) => dispatch(customers.requestOTP(countyCode, phoneNumber))
-});
+const mapDispatchToProps = {
+  increase: AppRedux.counterIncrease,
+  decrease: AppRedux.counterDecrease
+}
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Intro);
-*/
+)(CounterScreen)
+/** */
