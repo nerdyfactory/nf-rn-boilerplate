@@ -1,10 +1,10 @@
 
-/** MobX */
+/** MobX *
 import { CountersActions } from '../Store'
 import { inject } from 'mobx-react'
 /** */
 
-/** Redux *
+/** Redux */
 import { connect } from 'react-redux'
 import AppRedux from '../Store/Redux/AppRedux'
 /** */
@@ -17,7 +17,7 @@ CounterScreen.navigationOptions = () => {
   }
 }
 
-/** MobX */
+/** MobX *
 export default inject(({ store }) => (
   {
     // Stores
@@ -29,7 +29,7 @@ export default inject(({ store }) => (
 ))(CounterScreen)
 /** */
 
-/** Redux *
+/** Redux */
 const mapStateToProps = (state) => ({
   counter: state.app.counter
 })
