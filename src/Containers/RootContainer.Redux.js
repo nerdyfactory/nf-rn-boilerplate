@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 import { View, StatusBar, BackHandler, StyleSheet } from 'react-native'
 import { NavigationActions } from 'react-navigation'
 
-/** MobX */
-import { AppNavigation as Navigation, AppActions } from '../Store'
+/** Redux */
+import { connect } from 'react-redux'
+import ReduxPersist from '../Store/Redux/@Persist'
+import Navigation from '../Store/Redux/@ReduxNavigation'
+import AppActions from '../Store/Redux/AppRedux'
 /** */
 
 // import I18n from '../I18n'
@@ -48,8 +51,17 @@ class RootContainer extends Component {
   }
 }
 
-/** MobX */
-export default RootContainer
+/** Redux */
+const mapStateToProps = state => ({
+  startedUp: state.app.startedUp,
+  nav: state.nav
+})
+
+const mapDispatchToProps = {
+  startupRequest: AppActions.startupRequest
+}
+
+export default connect(null, dispatch => { return { dispatch } })(connect(mapStateToProps, mapDispatchToProps)(RootContainer))
 /** */
 
 const styles = StyleSheet.create({
