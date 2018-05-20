@@ -1,6 +1,9 @@
 {
-  "extends": [
-    "standard",
-    "standard-react"
-  ]
+  "env": {
+    "jest/globals": true
+  },
+  "parser": "babel-eslint",
+  "plugins": ["jest", "prettier"],
+  "extends": ["react-app"],
+  "rules": {"prettier/prettier": "error"}
 }
