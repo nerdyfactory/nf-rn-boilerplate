@@ -1,19 +1,18 @@
-import { StackNavigator } from 'react-navigation';
+import { StackNavigator } from "react-navigation";
 
-import LaunchScreen from '../Containers/LaunchScreen'
-import CounterScreen from '../Containers/CounterScreen'
-import SampleScreen from '../Containers/CounterScreen'
+import LaunchScreen from "../Containers/LaunchScreen";
+import CounterScreen from "../Containers/CounterScreen";
 
-export default RootNavigator = StackNavigator(
+export default (RootNavigator = StackNavigator(
   {
     Launch: { screen: LaunchScreen },
     Counter: {
-      path: 'counter/:title',
-      screen: CounterScreen 
+      path: "counter/:title",
+      screen: CounterScreen
     }
   },
   {
-    initialRouteName: 'Launch'
-//    headerMode: "none"
+    initialRouteName: "Launch"
+    //    headerMode: "none"
   }
-);
+));

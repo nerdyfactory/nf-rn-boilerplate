@@ -3,5 +3,5 @@ export { store, dispatch, Provider, AppNavigation, CountersActions } from './Mob
 /** */
 
 /** Redux */
-export { store, dispatch, Provider, AppNavigation } from './Redux'
+export { store, dispatch, Provider, AppNavigation } from "./Redux";
 /** */

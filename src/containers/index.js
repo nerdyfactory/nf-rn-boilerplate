@@ -1,5 +1,5 @@
-import LaunchScreen from './LaunchScreen';
- 
+import LaunchScreen from "./LaunchScreen";
+
 export default {
-  LaunchScreen,
+  LaunchScreen
 };

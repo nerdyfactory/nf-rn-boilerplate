@@ -1,10 +1,10 @@
 // import { connect } from 'react-redux';
 // import * as customers from '../redux/customers';
-import LaunchScreen from '../Components/LaunchScreen';
+import LaunchScreen from "../Components/LaunchScreen";
 
 LaunchScreen.navigationOptions = () => {
   return {
-    header: null,
+    header: null
   };
 };
 
