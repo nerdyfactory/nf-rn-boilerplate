@@ -1,12 +1,12 @@
 
 ## Linting ##
 
-```
+```shell
 yarn add babel-eslint prettier-eslint flow-bin babel-preset-flow eslint eslint-plugin-prettier eslint-plugin-react --dev
 ```
 
-``` .estlintrc
-
+At `.eslintrc` file:
+```json
 {
   "env": {
     "amd": true
@@ -28,8 +28,8 @@ yarn add babel-eslint prettier-eslint flow-bin babel-preset-flow eslint eslint-p
 
 ## Editor Config ##
 
-``` .editorconfig
-
+At `.editorconfig` file:
+```ini
 root = true
 
 [*]
