@@ -2,7 +2,7 @@
 ## Linting ##
 
 ```shell
-yarn add babel-eslint prettier-eslint flow-bin babel-preset-flow eslint eslint-plugin-prettier eslint-plugin-react --dev
+yarn add babel-eslint prettier-eslint flow-bin babel-preset-flow eslint eslint-plugin-prettier eslint-plugin-react eslint-plugin-jest eslint-config-react-app eslint-plugin-import eslint-plugin-flowtype eslint-plugin-jsx-a11y --dev
 ```
 
 At `.eslintrc` file:
